@@ -1,4 +1,4 @@
-update=8/2/2020 6:13:39 PM
+update=8/7/2020 4:39:04 AM
 version=1
 last_client=kicad
 [general]
@@ -34,7 +34,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=../../../git/skripsi/LAPORAN/
+PlotDirectoryName=C:/Users/anung/Desktop/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
