@@ -1,0 +1,86 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:DS18B20 U1
+U 1 1 5F1786DA
+P 4850 3550
+F 0 "U1" H 4620 3597 50  0000 R CNN
+F 1 "DS18B20" H 4620 3504 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3850 3300 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 4700 3800 50  0001 C CNN
+	1    4850 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F1787EE
+P 5300 3350
+F 0 "R1" H 5370 3397 50  0000 L CNN
+F 1 "4k7" H 5370 3304 50  0000 L CNN
+F 2 "" V 5230 3350 50  0001 C CNN
+F 3 "~" H 5300 3350 50  0001 C CNN
+	1    5300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5F17883D
+P 4850 3100
+F 0 "#PWR0101" H 4850 2950 50  0001 C CNN
+F 1 "+3.3V" H 4865 3277 50  0000 C CNN
+F 2 "" H 4850 3100 50  0001 C CNN
+F 3 "" H 4850 3100 50  0001 C CNN
+	1    4850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5F178853
+P 5300 3100
+F 0 "#PWR0102" H 5300 2950 50  0001 C CNN
+F 1 "+3.3V" H 5315 3277 50  0000 C CNN
+F 2 "" H 5300 3100 50  0001 C CNN
+F 3 "" H 5300 3100 50  0001 C CNN
+	1    5300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F178887
+P 4850 3950
+F 0 "#PWR0103" H 4850 3700 50  0001 C CNN
+F 1 "GND" H 4855 3773 50  0000 C CNN
+F 2 "" H 4850 3950 50  0001 C CNN
+F 3 "" H 4850 3950 50  0001 C CNN
+	1    4850 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3550 5300 3550
+Wire Wire Line
+	5300 3550 5300 3500
+Wire Wire Line
+	5300 3100 5300 3200
+Wire Wire Line
+	4850 3100 4850 3250
+Wire Wire Line
+	4850 3850 4850 3950
+Text GLabel 5500 3550 2    50   Input ~ 0
+nodeMCU_GPIO
+Wire Wire Line
+	5300 3550 5500 3550
+Connection ~ 5300 3550
+$EndSCHEMATC

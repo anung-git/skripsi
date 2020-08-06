@@ -1,0 +1,135 @@
+EESchema Schematic File Version 4
+LIBS:sumur-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SKRIPSI POMPA AIR IOT"
+Date "2020-07-26"
+Rev "0.0.1"
+Comp "ANUNG"
+Comment1 "312118052"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L wemos_mini:WeMos_D1_mini U5
+U 1 1 5F1D18F0
+P 6150 3400
+F 0 "U5" H 6150 4046 60  0000 C CNN
+F 1 "NodeMCU" H 6150 3936 60  0000 C CNN
+F 2 "" H 6700 2700 60  0000 C CNN
+F 3 "" H 6150 3936 60  0000 C CNN
+	1    6150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:DS18B20 U2
+U 1 1 5F1D2EC1
+P 5000 3350
+F 0 "U2" H 4770 3397 50  0000 R CNN
+F 1 "DS18B20" H 4770 3304 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4000 3100 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 4850 3600 50  0001 C CNN
+	1    5000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F1D42BB
+P 5000 3750
+F 0 "#PWR05" H 5000 3500 50  0001 C CNN
+F 1 "GND" H 5005 3573 50  0000 C CNN
+F 2 "" H 5000 3750 50  0001 C CNN
+F 3 "" H 5000 3750 50  0001 C CNN
+	1    5000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR04
+U 1 1 5F1D4381
+P 5000 2900
+F 0 "#PWR04" H 5000 2750 50  0001 C CNN
+F 1 "+3.3V" H 5015 3077 50  0000 C CNN
+F 2 "" H 5000 2900 50  0001 C CNN
+F 3 "" H 5000 2900 50  0001 C CNN
+	1    5000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2900 5000 3050
+Wire Wire Line
+	5000 3650 5000 3750
+$Comp
+L power:+3.3V #PWR07
+U 1 1 5F1D4FA2
+P 5400 2900
+F 0 "#PWR07" H 5400 2750 50  0001 C CNN
+F 1 "+3.3V" H 5415 3077 50  0000 C CNN
+F 2 "" H 5400 2900 50  0001 C CNN
+F 3 "" H 5400 2900 50  0001 C CNN
+	1    5400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F1D4FDA
+P 5400 3100
+F 0 "R2" H 5470 3147 50  0000 L CNN
+F 1 "4k7" H 5470 3054 50  0000 L CNN
+F 2 "" V 5330 3100 50  0001 C CNN
+F 3 "~" H 5400 3100 50  0001 C CNN
+	1    5400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2950 5400 2900
+Wire Wire Line
+	5300 3350 5400 3350
+Wire Wire Line
+	5400 3350 5400 3250
+Connection ~ 5400 3350
+$Comp
+L power:+5V #PWR?
+U 1 1 5F1F2DCE
+P 6750 3750
+F 0 "#PWR?" H 6750 3600 50  0001 C CNN
+F 1 "+5V" V 6765 3881 50  0000 L CNN
+F 2 "" H 6750 3750 50  0001 C CNN
+F 3 "" H 6750 3750 50  0001 C CNN
+	1    6750 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 3750 6650 3750
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F21093A
+P 5600 3750
+F 0 "#PWR?" H 5600 3600 50  0001 C CNN
+F 1 "+3.3V" V 5615 3881 50  0000 L CNN
+F 2 "" H 5600 3750 50  0001 C CNN
+F 3 "" H 5600 3750 50  0001 C CNN
+	1    5600 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 3650 6650 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5F219CFD
+P 6700 3650
+F 0 "#PWR?" H 6700 3400 50  0001 C CNN
+F 1 "GND" V 6705 3519 50  0000 R CNN
+F 2 "" H 6700 3650 50  0001 C CNN
+F 3 "" H 6700 3650 50  0001 C CNN
+	1    6700 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5400 3350 5650 3350
+Wire Wire Line
+	5600 3750 5650 3750
+$EndSCHEMATC

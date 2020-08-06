@@ -1,0 +1,263 @@
+EESchema Schematic File Version 4
+LIBS:sumur-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SKRIPSI POMPA AIR IOT"
+Date "2020-07-26"
+Rev "0.0.1"
+Comp "ANUNG"
+Comment1 "312118052"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L wemos_mini:WeMos_D1_mini U5
+U 1 1 5F1D18F0
+P 4950 3050
+F 0 "U5" H 4950 3696 60  0000 C CNN
+F 1 "NodeMCU" H 4950 3586 60  0000 C CNN
+F 2 "" H 5500 2350 60  0000 C CNN
+F 3 "" H 4950 3586 60  0000 C CNN
+	1    4950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF3205 Q1
+U 1 1 5F1D19A2
+P 7600 3450
+F 0 "Q1" H 7806 3497 50  0000 L CNN
+F 1 "IRFZ44" H 7806 3404 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7850 3375 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 7600 3450 50  0001 L CNN
+	1    7600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U6
+U 1 1 5F1D1A43
+P 6800 2900
+F 0 "U6" H 6800 3231 50  0000 C CNN
+F 1 "PC817" H 6800 3138 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6600 2700 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6800 2900 50  0001 L CNN
+	1    6800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5F1D1AB7
+P 7300 3200
+F 0 "R7" H 7370 3247 50  0000 L CNN
+F 1 "220" H 7370 3154 50  0000 L CNN
+F 2 "" V 7230 3200 50  0001 C CNN
+F 3 "~" H 7300 3200 50  0001 C CNN
+	1    7300 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5F1D1B09
+P 7300 3700
+F 0 "R8" H 7370 3747 50  0000 L CNN
+F 1 "10k" H 7370 3654 50  0000 L CNN
+F 2 "" V 7230 3700 50  0001 C CNN
+F 3 "~" H 7300 3700 50  0001 C CNN
+	1    7300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5F1D1B5A
+P 7700 3900
+F 0 "#PWR019" H 7700 3650 50  0001 C CNN
+F 1 "GND" H 7705 3723 50  0000 C CNN
+F 2 "" H 7700 3900 50  0001 C CNN
+F 3 "" H 7700 3900 50  0001 C CNN
+	1    7700 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5F1D1B7B
+P 7300 3900
+F 0 "#PWR017" H 7300 3650 50  0001 C CNN
+F 1 "GND" H 7305 3723 50  0000 C CNN
+F 2 "" H 7300 3900 50  0001 C CNN
+F 3 "" H 7300 3900 50  0001 C CNN
+	1    7300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4002 D2
+U 1 1 5F1D1C34
+P 7700 3000
+F 0 "D2" V 7653 3079 50  0000 L CNN
+F 1 "1N4002" V 7746 3079 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7700 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7700 3000 50  0001 C CNN
+	1    7700 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5F1D1CE1
+P 8250 2900
+F 0 "M1" H 8408 2897 50  0000 L CNN
+F 1 "Motor_DC" H 8408 2804 50  0000 L CNN
+F 2 "" H 8250 2810 50  0001 C CNN
+F 3 "~" H 8250 2810 50  0001 C CNN
+	1    8250 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3050 7300 3000
+Wire Wire Line
+	7300 3350 7300 3450
+Wire Wire Line
+	7400 3450 7300 3450
+Connection ~ 7300 3450
+Wire Wire Line
+	7300 3450 7300 3550
+Wire Wire Line
+	7700 3150 7700 3200
+Wire Wire Line
+	8250 3200 7700 3200
+Connection ~ 7700 3200
+Wire Wire Line
+	7700 3200 7700 3250
+Wire Wire Line
+	7700 2850 7700 2650
+Wire Wire Line
+	7700 2650 8250 2650
+Wire Wire Line
+	8250 2650 8250 2700
+$Comp
+L power:+12V #PWR018
+U 1 1 5F1D1E7D
+P 7700 2550
+F 0 "#PWR018" H 7700 2400 50  0001 C CNN
+F 1 "+12V" H 7715 2727 50  0000 C CNN
+F 2 "" H 7700 2550 50  0001 C CNN
+F 3 "" H 7700 2550 50  0001 C CNN
+	1    7700 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2550 7700 2650
+Connection ~ 7700 2650
+$Comp
+L power:+3.3V #PWR016
+U 1 1 5F1D2043
+P 6400 2750
+F 0 "#PWR016" H 6400 2600 50  0001 C CNN
+F 1 "+3.3V" H 6415 2927 50  0000 C CNN
+F 2 "" H 6400 2750 50  0001 C CNN
+F 3 "" H 6400 2750 50  0001 C CNN
+	1    6400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2750 6400 2800
+Wire Wire Line
+	6400 2800 6500 2800
+$Comp
+L Device:R R6
+U 1 1 5F1D2181
+P 6200 3000
+F 0 "R6" H 6270 3047 50  0000 L CNN
+F 1 "220" H 6270 2954 50  0000 L CNN
+F 2 "" V 6130 3000 50  0001 C CNN
+F 3 "~" H 6200 3000 50  0001 C CNN
+	1    6200 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 3850 7300 3900
+Wire Wire Line
+	7700 3900 7700 3650
+$Comp
+L Sensor_Current:A1363xKTTN-5 U1
+U 1 1 5F1D2D52
+P 6100 2300
+F 0 "U1" H 5870 2347 50  0000 R CNN
+F 1 "flow sensor" H 5870 2254 50  0000 R CNN
+F 2 "Sensor_Current:Allegro_SIP-4" H 6450 2200 50  0001 L CIN
+F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx?la=en" H 6100 2300 50  0001 C CNN
+	1    6100 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR02
+U 1 1 5F1D41D8
+P 6100 1950
+F 0 "#PWR02" H 6100 1800 50  0001 C CNN
+F 1 "+3.3V" H 6115 2127 50  0000 C CNN
+F 2 "" H 6100 1950 50  0001 C CNN
+F 3 "" H 6100 1950 50  0001 C CNN
+	1    6100 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5F1D423B
+P 6100 2650
+F 0 "#PWR03" H 6100 2400 50  0001 C CNN
+F 1 "GND" H 6105 2473 50  0000 C CNN
+F 2 "" H 6100 2650 50  0001 C CNN
+F 3 "" H 6100 2650 50  0001 C CNN
+	1    6100 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2650 6100 2600
+Wire Wire Line
+	6100 2000 6100 1950
+Wire Wire Line
+	5700 2300 5550 2300
+$Comp
+L power:+5V #PWR?
+U 1 1 5F1F2DCE
+P 5750 3400
+F 0 "#PWR?" H 5750 3250 50  0001 C CNN
+F 1 "+5V" V 5765 3531 50  0000 L CNN
+F 2 "" H 5750 3400 50  0001 C CNN
+F 3 "" H 5750 3400 50  0001 C CNN
+	1    5750 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 3400 5450 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5F219CFD
+P 5700 3300
+F 0 "#PWR?" H 5700 3050 50  0001 C CNN
+F 1 "GND" V 5705 3169 50  0000 R CNN
+F 2 "" H 5700 3300 50  0001 C CNN
+F 3 "" H 5700 3300 50  0001 C CNN
+	1    5700 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 3300 5450 3300
+Wire Wire Line
+	5450 3000 6050 3000
+Wire Wire Line
+	6350 3000 6500 3000
+Wire Wire Line
+	5550 2300 5550 2900
+Wire Wire Line
+	5450 2900 5550 2900
+Wire Wire Line
+	7700 2650 7300 2650
+Wire Wire Line
+	7300 2650 7300 2800
+Wire Wire Line
+	7300 2800 7100 2800
+Wire Wire Line
+	7100 3000 7300 3000
+$EndSCHEMATC
