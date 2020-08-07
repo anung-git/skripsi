@@ -13,13 +13,13 @@ class _AlarmState extends State<Alarm> {
     'Normal current motor',
     'Normal temperature',
     'Normal water level',
-    'Normal preasure'
+    'Normal pressure'
   ];
   final List<String> alarm = [
     'Over current motor',
     'Over heat motor',
     'Low watter level',
-    'Low preasure'
+    'Low pressure'
   ];
 
   final List<String> normalMsg = [

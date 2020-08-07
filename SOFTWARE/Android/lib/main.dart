@@ -71,7 +71,7 @@ class _RootPageState extends State<RootPage>
       if ( event.snapshot.key == "flow") {
         _numId = 3;
         titelAlarm = "Flow Alarm";
-        _value = 'Low preasure';
+        _value = 'Low pressure';
       }
       if (event.snapshot.value == true) {
         showOngoingNotification(FlutterLocalNotificationsPlugin(),
@@ -105,7 +105,7 @@ class _RootPageState extends State<RootPage>
                 Icons.pan_tool,
                 color: Colors.purple,
               ),
-              text: "Motor",
+              text: "Setting",
             ),
             new Tab(
               icon: new Icon(
